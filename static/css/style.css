@@ -1,0 +1,219 @@
+/* ==========================
+   PANASEA
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f6f8fb;
+    color:#222;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#fff !important;
+    padding:15px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+}
+
+.nav-link{
+    font-weight:500;
+    margin-left:15px;
+}
+
+/* Hero */
+
+.hero-img{
+    width:100%;
+    max-width:450px;
+}
+
+.display-4{
+    line-height:1.2;
+}
+
+/* Search */
+
+.search-box{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+}
+
+.search-input{
+    border:none;
+    box-shadow:none !important;
+    font-size:18px;
+}
+
+.search-input:focus{
+    border:none;
+}
+
+/* Category */
+
+.category-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:40px;
+
+    color:#198754;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.category-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.category-card h6{
+
+    margin-top:15px;
+
+    font-weight:600;
+
+}
+
+/* Medicine */
+
+.medicine-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.medicine-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.medicine-card img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+}
+
+/* Artikel */
+
+.article-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.article-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.article-card a{
+
+    color:#198754;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+/* Button */
+
+.btn{
+
+    border-radius:12px;
+
+}
+
+/* Footer */
+
+footer{
+
+    margin-top:80px;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero-img{
+
+margin-top:40px;
+
+}
+
+.display-4{
+
+font-size:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.display-4{
+
+font-size:32px;
+
+}
+
+.category-card{
+
+padding:20px;
+
+font-size:30px;
+
+}
+
+}

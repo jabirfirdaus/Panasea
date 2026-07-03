@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ obat.nama }} - Panasea{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-sm border-0" style="border-radius: 18px;">
+                    <div class="card-body p-5">
+
+                        <a href="{{ url_for('user.rekomendasi') }}" class="text-success mb-3 d-inline-block">
+                            <i class="bi bi-arrow-left"></i> Kembali ke Rekomendasi
+                        </a>
+
+                        <h2 class="fw-bold mt-2">{{ obat.nama }}</h2>
+
+                        <hr>
+
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-3">
+                                <h6 class="text-muted">Harga</h6>
+                                <h4 class="text-success fw-bold">Rp {{ "{:,}".format(obat.harga) }}</h4>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <h6 class="text-muted">Stok</h6>
+                                <h4>
+                                    {% if obat.stok > 0 %}
+                                        <span class="badge bg-success">Tersedia ({{ obat.stok }})</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">Habis</span>
+                                    {% endif %}
+                                </h4>
+                            </div>
+                        </div>
+
+                        {% if obat.deskripsi %}
+                        <div class="mt-3">
+                            <h5 class="fw-bold">Deskripsi</h5>
+                            <p>{{ obat.deskripsi }}</p>
+                        </div>
+                        {% endif %}
+
+                        {% if obat.aturan_pakai %}
+                        <div class="mt-3">
+                            <h5 class="fw-bold">Aturan Pakai</h5>
+                            <p><i class="bi bi-info-circle text-success"></i> {{ obat.aturan_pakai }}</p>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block title %}Dashboard Admin - Panasea{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">
+                <i class="bi bi-speedometer2"></i> Dashboard Admin
+            </h2>
+            <a href="{{ url_for('admin.tambah_obat') }}" class="btn btn-success">
+                <i class="bi bi-plus-lg"></i> Tambah Obat
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0" style="border-radius: 18px;">
+            <div class="card-body p-4">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-success">
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Obat</th>
+                                <th>Harga</th>
+                                <th>Stok</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for o in data %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td><strong>{{ o.nama }}</strong></td>
+                                <td>Rp {{ "{:,}".format(o.harga) }}</td>
+                                <td>
+                                    {% if o.stok > 0 %}
+                                        <span class="badge bg-success">{{ o.stok }}</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">Habis</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <a href="{{ url_for('admin.edit_obat', id=o.id) }}"
+                                       class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-pencil"></i> Edit
+                                    </a>
+                                    <form action="{{ url_for('admin.hapus_obat', id=o.id) }}"
+                                          method="POST" class="d-inline"
+                                          onsubmit="return confirm('Yakin ingin menghapus obat ini?')">
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                            <i class="bi bi-trash"></i> Hapus
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="5" class="text-center text-muted py-4">
+                                    Belum ada data obat.
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
