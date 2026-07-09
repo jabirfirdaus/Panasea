@@ -107,3 +107,10 @@ Panasea/
 ## Lisensi
 
 Project ini dibuat untuk keperluan tugas kuliah.
+
+## kelompok 2
+teguh dwiyana
+jabir andika firdaus 
+sayyid sabil sula
+rijal
+nova
