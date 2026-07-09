@@ -109,8 +109,11 @@ Panasea/
 Project ini dibuat untuk keperluan tugas kuliah.
 
 ## kelompok 2
-teguh dwiyana
-jabir andika firdaus 
-sayyid sabil sula
-rijal
-nova
+
+| Nama | NIM |
+|----------|----------|
+| JABIR    | 240511067 |
+| Teguh Dwiyana | 240511000 |
+| Sayyid Sabil | 240511000 |
+| Rizal | 240511000 |
+| Nova | 240511000 |
