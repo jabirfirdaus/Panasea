@@ -115,5 +115,5 @@ Project ini dibuat untuk keperluan tugas kuliah.
 | JABIR    | 240511067 |
 | Teguh Dwiyana | 240511000 |
 | Sayyid Sabil | 240511000 |
-| Rizal | 240511000 |
+| Ramadhan Oktarizaldi | 240511000 |
 | Nova | 240511000 |
