@@ -48,8 +48,7 @@
                             <div class="card shadow-sm border-0 h-100" style="border-radius: 18px;">
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold text-success">{{ o.nama }}</h5>
-                                    <p class="text-muted mb-1">Harga: Rp {{ "{:,}".format(o.harga) }}</p>
-                                    <p class="text-muted mb-2">Stok: {{ o.stok }}</p>
+                                    <p class="text-muted mb-2">Harga: Rp {{ "{:,}".format(o.harga) }}</p>
                                     {% if o.deskripsi %}
                                         <p class="small">{{ o.deskripsi[:100] }}{% if o.deskripsi|length > 100 %}...{% endif %}</p>
                                     {% endif %}

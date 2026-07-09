@@ -5,7 +5,7 @@ Panasea adalah aplikasi web untuk merekomendasikan obat bebas berdasarkan gejala
 ## Fitur
 
 - **Rekomendasi Obat** -- Pilih gejala/penyakit dan dapatkan rekomendasi obat yang sesuai
-- **Detail Obat** -- Lihat informasi lengkap obat (harga, stok, deskripsi, aturan pakai)
+- **Detail Obat** -- Lihat informasi lengkap obat (harga, deskripsi, aturan pakai)
 - **Autentikasi** -- Sistem login dan registrasi pengguna
 - **Dashboard Admin** -- CRUD data obat (Tambah, Edit, Hapus)
 - **Responsive Design** -- Tampilan menyesuaikan di desktop dan mobile

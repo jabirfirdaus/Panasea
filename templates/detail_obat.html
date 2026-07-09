@@ -19,19 +19,9 @@
                         <hr>
 
                         <div class="row mt-4">
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-12 mb-3">
                                 <h6 class="text-muted">Harga</h6>
                                 <h4 class="text-success fw-bold">Rp {{ "{:,}".format(obat.harga) }}</h4>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <h6 class="text-muted">Stok</h6>
-                                <h4>
-                                    {% if obat.stok > 0 %}
-                                        <span class="badge bg-success">Tersedia ({{ obat.stok }})</span>
-                                    {% else %}
-                                        <span class="badge bg-danger">Habis</span>
-                                    {% endif %}
-                                </h4>
                             </div>
                         </div>
 

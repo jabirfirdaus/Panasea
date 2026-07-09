@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS obat (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
     harga INT NOT NULL,
-    stok INT NOT NULL DEFAULT 0,
     deskripsi TEXT,
     aturan_pakai VARCHAR(200),
     foto VARCHAR(255)
@@ -55,17 +54,17 @@ INSERT INTO penyakit (nama) VALUES
 ('Sakit Gigi');
 
 -- Obat
-INSERT INTO obat (nama, harga, stok, deskripsi, aturan_pakai) VALUES
-('Paracetamol', 5000, 100, 'Obat untuk menurunkan demam dan meredakan nyeri ringan hingga sedang.', '3x sehari 1 tablet setelah makan'),
-('Ibuprofen', 8000, 80, 'Obat anti-inflamasi non-steroid (NSAID) untuk nyeri dan demam.', '3x sehari 1 tablet setelah makan'),
-('OBH Combi', 15000, 50, 'Sirup obat batuk hitam yang mengandung succus liquiritiae untuk meredakan batuk berdahak.', '3x sehari 1 sendok makan'),
-('Promag', 3000, 120, 'Antasida untuk menetralkan asam lambung berlebih.', '3x sehari 1-2 tablet sebelum makan'),
-('Bodrex', 4000, 90, 'Obat untuk sakit kepala dan demam.', '3x sehari 1 tablet setelah makan'),
-('Amoxicillin', 12000, 60, 'Antibiotik untuk infeksi bakteri. Harus dengan resep dokter.', '3x sehari 1 kapsul setelah makan'),
-('Decolgen', 7000, 70, 'Obat untuk meredakan gejala flu seperti hidung tersumbat, demam, dan nyeri.', '3x sehari 1 tablet setelah makan'),
-('Antangin', 3000, 100, 'Obat herbal untuk masuk angin dan perut kembung.', '3x sehari 1 tablet'),
-('Ponstan', 10000, 40, 'Obat pereda nyeri termasuk sakit gigi.', '3x sehari 1 tablet setelah makan'),
-('Actifed', 12000, 55, 'Obat untuk meredakan batuk tidak berdahak dan hidung tersumbat.', '3x sehari 1 sendok teh');
+INSERT INTO obat (nama, harga, deskripsi, aturan_pakai) VALUES
+('Paracetamol', 5000, 'Obat untuk menurunkan demam dan meredakan nyeri ringan hingga sedang.', '3x sehari 1 tablet setelah makan'),
+('Ibuprofen', 8000, 'Obat anti-inflamasi non-steroid (NSAID) untuk nyeri dan demam.', '3x sehari 1 tablet setelah makan'),
+('OBH Combi', 15000, 'Sirup obat batuk hitam yang mengandung succus liquiritiae untuk meredakan batuk berdahak.', '3x sehari 1 sendok makan'),
+('Promag', 3000, 'Antasida untuk menetralkan asam lambung berlebih.', '3x sehari 1-2 tablet sebelum makan'),
+('Bodrex', 4000, 'Obat untuk sakit kepala dan demam.', '3x sehari 1 tablet setelah makan'),
+('Amoxicillin', 12000, 'Antibiotik untuk infeksi bakteri. Harus dengan resep dokter.', '3x sehari 1 kapsul setelah makan'),
+('Decolgen', 7000, 'Obat untuk meredakan gejala flu seperti hidung tersumbat, demam, dan nyeri.', '3x sehari 1 tablet setelah makan'),
+('Antangin', 3000, 'Obat herbal untuk masuk angin dan perut kembung.', '3x sehari 1 tablet'),
+('Ponstan', 10000, 'Obat pereda nyeri termasuk sakit gigi.', '3x sehari 1 tablet setelah makan'),
+('Actifed', 12000, 'Obat untuk meredakan batuk tidak berdahak dan hidung tersumbat.', '3x sehari 1 sendok teh');
 
 -- Relasi obat-penyakit
 INSERT INTO relasi (obat_id, penyakit_id) VALUES

@@ -29,7 +29,6 @@ def tambah_obat():
     if request.method == 'POST':
         nama = request.form.get('nama', '').strip()
         harga = request.form.get('harga', '0')
-        stok = request.form.get('stok', '0')
         deskripsi = request.form.get('deskripsi', '').strip()
         aturan = request.form.get('aturan', '').strip()
 
@@ -39,19 +38,17 @@ def tambah_obat():
 
         try:
             harga = int(harga)
-            stok = int(stok)
         except ValueError:
-            flash('Harga dan stok harus berupa angka.', 'danger')
+            flash('Harga harus berupa angka.', 'danger')
             return render_template('admin/tambah_obat.html')
 
-        if harga < 0 or stok < 0:
-            flash('Harga dan stok tidak boleh negatif.', 'danger')
+        if harga < 0:
+            flash('Harga tidak boleh negatif.', 'danger')
             return render_template('admin/tambah_obat.html')
 
         obat = Obat(
             nama=nama,
             harga=harga,
-            stok=stok,
             deskripsi=deskripsi,
             aturan_pakai=aturan,
             foto=''
@@ -74,7 +71,6 @@ def edit_obat(id):
     if request.method == 'POST':
         nama = request.form.get('nama', '').strip()
         harga = request.form.get('harga', '0')
-        stok = request.form.get('stok', '0')
         deskripsi = request.form.get('deskripsi', '').strip()
         aturan = request.form.get('aturan', '').strip()
 
@@ -84,14 +80,12 @@ def edit_obat(id):
 
         try:
             harga = int(harga)
-            stok = int(stok)
         except ValueError:
-            flash('Harga dan stok harus berupa angka.', 'danger')
+            flash('Harga harus berupa angka.', 'danger')
             return render_template('admin/edit_obat.html', obat=obat)
 
         obat.nama = nama
         obat.harga = harga
-        obat.stok = stok
         obat.deskripsi = deskripsi
         obat.aturan_pakai = aturan
 
